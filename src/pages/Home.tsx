@@ -1,8 +1,13 @@
 import type { FC } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import AnimatedCounter from '../components/home/AnimatedCounter'
 import HeroIllustration from '../components/home/HeroIllustration'
+import QuoteForm from '../components/contact/QuoteForm'
 
 const Home: FC = () => {
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false)
+
   return (
     <div className="bg-concrete">
       <section className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-10 lg:flex-row lg:items-center lg:pt-16">
@@ -21,18 +26,19 @@ const Home: FC = () => {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="/contact"
+            <button
+              type="button"
+              onClick={() => setIsQuoteOpen(true)}
               className="inline-flex items-center justify-center rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-transform duration-150 ease-in-out-soft hover:-translate-y-0.5 hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-concrete"
             >
               Get a Quote
-            </a>
-            <a
-              href="/projects"
+            </button>
+            <Link
+              to="/projects"
               className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold text-brand-800 ring-1 ring-brand-200 transition-transform duration-150 ease-in-out-soft hover:-translate-y-0.5 hover:bg-white hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-concrete"
             >
               Our Projects
-            </a>
+            </Link>
             <p className="mt-2 text-xs text-brand-600 sm:mt-0">
               Response within one business day.
             </p>
@@ -129,17 +135,39 @@ const Home: FC = () => {
                 <li>• Transparent reporting with weekly progress snapshots.</li>
                 <li>• Dedicated quality and safety teams on every site.</li>
               </ul>
-              <a
-                href="/projects"
+              <Link
+                to="/projects"
                 className="inline-flex items-center text-xs font-semibold text-brand-700 hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 View all projects
                 <span className="ml-1 text-base">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
+      {isQuoteOpen && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/40 px-4">
+          <div className="relative w-full max-w-lg rounded-2xl bg-concrete p-4 shadow-xl ring-1 ring-brand-900/10">
+            <div className="mb-3 flex items-center justify-between">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-600">Get a quote</p>
+                <h2 className="text-base font-semibold text-brand-900">Tell us about your project</h2>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsQuoteOpen(false)}
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full text-sm text-brand-600 hover:bg-white/70 hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-concrete"
+                aria-label="Close quote form"
+              >
+                ✕
+              </button>
+            </div>
+            <QuoteForm />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

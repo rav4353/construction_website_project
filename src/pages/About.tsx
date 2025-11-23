@@ -214,15 +214,15 @@ const About: FC = () => {
           </div>
         </div>
         <div className="mt-5 overflow-hidden rounded-2xl bg-white/95 p-4 shadow-sm ring-1 ring-brand-100">
-          <div className="flex animate-[slide-left_16s_linear_infinite] gap-6 whitespace-nowrap [animation-play-state:running] hover:[animation-play-state:paused]">
+          <div className="flex gap-4 overflow-x-auto sm:overflow-x-hidden sm:animate-[slide-left_16s_linear_infinite] [animation-play-state:running] hover:[animation-play-state:paused]">
             {[...AWARDS, ...AWARDS].map((award, index) => (
               <div
                 key={`${award.name}-${index}`}
-                className="min-w-[220px] rounded-2xl bg-concrete px-4 py-3 text-xs text-brand-800 shadow-sm ring-1 ring-brand-100"
+                className="min-w-[220px] max-w-xs shrink-0 rounded-2xl bg-concrete px-4 py-3 text-xs text-brand-800 shadow-sm ring-1 ring-brand-100"
               >
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-600">{award.year}</p>
-                <p className="mt-1 text-sm font-semibold text-brand-900">{award.name}</p>
-                <p className="mt-1 text-[11px] text-brand-700">{award.org}</p>
+                <p className="mt-1 text-sm font-semibold text-brand-900 break-words leading-snug">{award.name}</p>
+                <p className="mt-1 text-[11px] text-brand-700 break-words leading-snug">{award.org}</p>
               </div>
             ))}
           </div>
