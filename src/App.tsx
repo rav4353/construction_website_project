@@ -50,7 +50,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 
 const App: FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/construction_website_project">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
