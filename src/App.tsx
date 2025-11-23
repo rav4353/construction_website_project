@@ -1,5 +1,5 @@
 import type { FC, PropsWithChildren } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
@@ -50,7 +50,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 
 const App: FC = () => {
   return (
-    <BrowserRouter basename="/construction_website_project">
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -62,7 +62,7 @@ const App: FC = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
