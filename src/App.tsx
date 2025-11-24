@@ -48,13 +48,13 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
               FAQ
             </Link>
             <Link
-              to="/privacy"
+              to="/legal/privacy"
               className="hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               Privacy
             </Link>
             <Link
-              to="/terms"
+              to="/legal/terms"
               className="hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               Terms
@@ -81,8 +81,8 @@ const App: FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/legal/terms" element={<Terms />} />
+          <Route path="/legal/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
