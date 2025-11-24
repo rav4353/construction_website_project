@@ -59,7 +59,7 @@ const Services: FC = () => {
         </div>
       </div>
 
-      <section className="mx-auto max-w-6xl px-4 pb-14 pt-10 sm:pt-14">
+      <section className="mx-auto max-w-6xl px-4 pb-14 pt-10 sm:pt-14 animate-fade-up-soft">
         <header className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">Services</p>
           <h1 className="mt-1 text-2xl font-semibold text-brand-900 sm:text-3xl">Services for every stage of your build</h1>
@@ -71,7 +71,7 @@ const Services: FC = () => {
       </section>
 
       {/* Visual service sections */}
-      <section className="mx-auto max-w-6xl px-4 pb-16">
+      <section className="mx-auto max-w-6xl px-4 pb-16 animate-fade-up-soft">
         <div className="space-y-6">
           <div className="grid gap-6 rounded-2xl bg-white/90 p-5 shadow-sm ring-1 ring-brand-100 md:grid-cols-[1.6fr,1.4fr]">
             <div className="space-y-3">
@@ -172,7 +172,7 @@ const Services: FC = () => {
       </section>
 
       {/* Tiers accordion */}
-      <section className="mx-auto max-w-6xl px-4 pb-24">
+      <section className="mx-auto max-w-6xl px-4 pb-24 animate-fade-up-soft">
         <div className="grid gap-8 md:grid-cols-[1.3fr,1.7fr]">
           <div>
             <h2 className="text-base font-semibold text-brand-900 sm:text-lg">Service tiers</h2>
@@ -187,7 +187,7 @@ const Services: FC = () => {
                 <article
                   key={tier.id}
                   className={`overflow-hidden rounded-2xl border bg-white/95 text-xs shadow-sm transition-all duration-200 ease-in-out-soft ${
-                    isOpen ? 'border-brand-600 shadow-md' : 'border-brand-100 hover:border-brand-300'
+                    isOpen ? 'border-brand-600 shadow-md hover-lift-soft' : 'border-brand-100 hover:border-brand-300 hover-lift-soft'
                   }`}
                 >
                   <button

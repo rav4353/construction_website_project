@@ -48,6 +48,11 @@ const Navbar: FC = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/faq" className={navLinkBase} onClick={closeMenu}>
+                FAQ
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/contact" className={navLinkBase} onClick={closeMenu}>
                 Contact
               </NavLink>
@@ -122,6 +127,15 @@ const Navbar: FC = () => {
                 onClick={closeMenu}
               >
                 About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/faq"
+                className={navLinkBase}
+                onClick={closeMenu}
+              >
+                FAQ
               </NavLink>
             </li>
             <li>

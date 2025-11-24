@@ -10,7 +10,7 @@ const Home: FC = () => {
 
   return (
     <div className="bg-concrete">
-      <section className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-10 lg:flex-row lg:items-center lg:pt-16">
+      <section className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-10 lg:flex-row lg:items-center lg:pt-16 animate-fade-up-soft">
         <div className="flex-1 space-y-6">
           <p className="inline-flex items-center rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100">
             Trusted construction partner for commercial & residential projects
@@ -49,7 +49,7 @@ const Home: FC = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pb-16">
+      <section className="mx-auto max-w-6xl px-4 pb-16 animate-fade-up-soft">
         <div className="grid gap-4 rounded-2xl bg-white/90 p-4 shadow-sm ring-1 ring-brand-100 sm:grid-cols-3">
           <AnimatedCounter label="Projects delivered" value={180} suffix="+" />
           <AnimatedCounter label="Years in operation" value={15} suffix="+" />
@@ -85,7 +85,7 @@ const Home: FC = () => {
           ].map((service) => (
             <article
               key={service.title}
-              className="group flex flex-col justify-between rounded-2xl bg-white/90 p-5 shadow-sm ring-1 ring-brand-100 transition-transform duration-150 ease-in-out-soft hover:-translate-y-1 hover:shadow-md"
+              className="group flex flex-col justify-between rounded-2xl bg-white/90 p-5 shadow-sm ring-1 ring-brand-100 hover-lift-soft hover:shadow-md"
             >
               <div>
                 <div className="flex items-center gap-3">
@@ -113,7 +113,7 @@ const Home: FC = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pb-20">
+      <section className="mx-auto max-w-6xl px-4 pb-20 animate-fade-up-soft">
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-xl font-semibold text-brand-900 sm:text-2xl">Selected projects</h2>

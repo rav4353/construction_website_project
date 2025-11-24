@@ -28,7 +28,7 @@ const Contact: FC = () => {
         </div>
       </div>
 
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:pt-14">
+      <section className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:pt-14 animate-fade-up-soft">
         <header className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">Contact</p>
           <h1 className="mt-1 text-2xl font-semibold text-brand-900 sm:text-3xl">Tell us about your next project</h1>

@@ -20,3 +20,24 @@
     @apply text-brand-600;
   }
 }
+
+@layer utilities {
+  .animate-fade-up-soft {
+    animation: fade-up-soft 600ms ease-out both;
+  }
+
+  .hover-lift-soft {
+    @apply transition-transform duration-200 ease-in-out-soft hover:-translate-y-1;
+  }
+
+  @keyframes fade-up-soft {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

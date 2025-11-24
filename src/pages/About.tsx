@@ -93,7 +93,7 @@ const About: FC = () => {
 
   return (
     <main className="bg-concrete text-steel">
-      <section className="mx-auto max-w-6xl px-4 pb-14 pt-10 sm:pt-14">
+      <section className="mx-auto max-w-6xl px-4 pb-14 pt-10 sm:pt-14 animate-fade-up-soft">
         <header className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">About</p>
           <h1 className="mt-1 text-2xl font-semibold text-brand-900 sm:text-3xl">Engineering confidence since 2008</h1>
@@ -105,7 +105,7 @@ const About: FC = () => {
       </section>
 
       {/* Team section */}
-      <section className="mx-auto max-w-6xl px-4 pb-16">
+      <section className="mx-auto max-w-6xl px-4 pb-16 animate-fade-up-soft">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-base font-semibold text-brand-900 sm:text-lg">Leadership team</h2>
@@ -144,7 +144,7 @@ const About: FC = () => {
       </section>
 
       {/* Values + timeline */}
-      <section className="mx-auto max-w-6xl px-4 pb-18">
+      <section className="mx-auto max-w-6xl px-4 pb-18 animate-fade-up-soft">
         <div className="grid gap-8 md:grid-cols-[1.2fr,1.8fr]">
           <div>
             <h2 className="text-base font-semibold text-brand-900 sm:text-lg">How we build</h2>
@@ -204,7 +204,7 @@ const About: FC = () => {
       </section>
 
       {/* Certifications & awards carousel */}
-      <section className="mx-auto max-w-6xl px-4 pb-24">
+      <section className="mx-auto max-w-6xl px-4 pb-24 animate-fade-up-soft">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-base font-semibold text-brand-900 sm:text-lg">Certifications & awards</h2>
