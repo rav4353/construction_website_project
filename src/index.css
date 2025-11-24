@@ -9,6 +9,7 @@
 
   body {
     @apply m-0 min-h-screen bg-concrete font-sans text-steel;
+    scroll-behavior: smooth;
   }
 
   a {

@@ -1,12 +1,18 @@
 import type { FC, PropsWithChildren } from 'react'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes, Link } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import Services from './pages/Services'
+import PreConstructionPlanning from './pages/PreConstructionPlanning'
+import GeneralContracting from './pages/GeneralContracting'
+import DesignBuildDelivery from './pages/DesignBuildDelivery'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import FAQ from './pages/FAQ'
+import Terms from './pages/Terms'
+import Privacy from './pages/Privacy'
 import NotFound from './pages/NotFound'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
@@ -35,12 +41,24 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
             >
               Contact
             </a>
-            <a href="#" className="hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+            <Link
+              to="/faq"
+              className="hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            >
+              FAQ
+            </Link>
+            <Link
+              to="/privacy"
+              className="hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            >
               Privacy
-            </a>
-            <a href="#" className="hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+            </Link>
+            <Link
+              to="/terms"
+              className="hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            >
               Terms
-            </a>
+            </Link>
           </div>
         </div>
       </footer>
@@ -57,8 +75,14 @@ const App: FC = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/pre-construction-planning" element={<PreConstructionPlanning />} />
+          <Route path="/services/general-contracting" element={<GeneralContracting />} />
+          <Route path="/services/design-build-delivery" element={<DesignBuildDelivery />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

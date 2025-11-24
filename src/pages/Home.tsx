@@ -60,22 +60,26 @@ const Home: FC = () => {
       <section className="mx-auto max-w-6xl px-4 pb-16">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-xl font-semibold text-brand-900 sm:text-2xl">Core services</h2>
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-600">What we do</p>
+            <h2 className="mt-1 text-xl font-semibold text-brand-900 sm:text-2xl">Core services</h2>
             <p className="mt-1 text-sm text-brand-700">End-to-end delivery for complex commercial and residential builds.</p>
           </div>
         </div>
-        <div className="mt-6 grid gap-5 md:grid-cols-3">
+        <div className="mt-6 grid gap-5 rounded-2xl bg-white/40 p-4 ring-1 ring-brand-100/60 md:grid-cols-3">
           {[
             {
               title: 'Pre-construction & planning',
+              slug: 'pre-construction-planning',
               description: 'Feasibility studies, cost planning, and constructability reviews to de-risk your project.',
             },
             {
               title: 'General contracting',
+              slug: 'general-contracting',
               description: 'Coordinated site execution with safety-first supervision and transparent reporting.',
             },
             {
               title: 'Design-build delivery',
+              slug: 'design-build-delivery',
               description: 'Integrated design and construction teams for faster timelines and fewer change orders.',
             },
           ].map((service) => (
@@ -94,12 +98,16 @@ const Home: FC = () => {
                 </div>
                 <p className="mt-3 text-xs text-brand-700 sm:text-sm">{service.description}</p>
               </div>
-              <button className="mt-4 inline-flex items-center text-xs font-semibold text-brand-700 transition-colors duration-150 group-hover:text-brand-900">
+              <Link
+                to={`/services/${service.slug}`}
+                className="mt-4 inline-flex items-center text-xs font-semibold text-brand-700 transition-colors duration-150 group-hover:text-brand-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                aria-label={`Learn more about ${service.title}`}
+              >
                 Learn more
                 <span className="ml-1 translate-x-0 text-base transition-transform duration-150 group-hover:translate-x-0.5">
                   →
                 </span>
-              </button>
+              </Link>
             </article>
           ))}
         </div>

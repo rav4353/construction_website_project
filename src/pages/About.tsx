@@ -233,12 +233,20 @@ const About: FC = () => {
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/40 px-4 py-6">
           <div className="max-w-sm rounded-2xl bg-white p-5 text-xs text-brand-800 shadow-xl ring-1 ring-brand-200">
             <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-600">Leadership profile</p>
-                <h3 className="mt-1 text-sm font-semibold text-brand-900">{selectedMember.name}</h3>
-                <p className="mt-1 text-[11px] font-semibold uppercase tracking-wide text-brand-600">
-                  {selectedMember.role}
-                </p>
+              <div className="flex items-start gap-3">
+                <div className="relative mt-0.5 h-12 w-12 shrink-0 rounded-full bg-gradient-to-tr from-brand-700 via-brand-500 to-accent/70 shadow-md">
+                  <div className="absolute inset-1 rounded-full bg-white/10" />
+                  <span className="absolute inset-0 flex items-center justify-center text-xl" aria-hidden="true">
+                    👷
+                  </span>
+                </div>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-600">Leadership profile</p>
+                  <h3 className="mt-1 text-sm font-semibold text-brand-900">{selectedMember.name}</h3>
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wide text-brand-600">
+                    {selectedMember.role}
+                  </p>
+                </div>
               </div>
               <button
                 type="button"

@@ -208,12 +208,8 @@ const Services: FC = () => {
                       {isOpen ? '−' : '+'}
                     </span>
                   </button>
-                  <div
-                    className={`grid transition-all duration-200 ease-in-out-soft ${
-                      isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-                    }`}
-                  >
-                    <div className="overflow-hidden px-4 pb-4">
+                  {isOpen && (
+                    <div className="px-4 pb-4">
                       <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-600">Ideal for</p>
                       <p className="mt-1 text-[11px] text-brand-700">{tier.idealFor}</p>
                       <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-brand-600">Highlights</p>
@@ -223,7 +219,7 @@ const Services: FC = () => {
                         ))}
                       </ul>
                     </div>
-                  </div>
+                  )}
                 </article>
               )
             })}

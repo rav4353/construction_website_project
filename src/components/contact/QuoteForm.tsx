@@ -185,20 +185,25 @@ const QuoteForm: FC = () => {
           >
             Project type
           </label>
-          <select
-            id="projectType"
-            name="projectType"
-            value={form.projectType}
-            onChange={(event) => handleChange('projectType', event.target.value)}
-            onBlur={() => handleBlur('projectType')}
-            className="mt-1 w-full rounded-md border border-brand-200 bg-white px-3 py-2 text-xs text-brand-900 shadow-sm outline-none transition ring-brand-500 focus:border-brand-400 focus:ring-2"
-          >
-            <option value="">Select an option</option>
-            <option value="commercial">Commercial / workplace</option>
-            <option value="residential">Residential</option>
-            <option value="industrial">Industrial / logistics</option>
-            <option value="mixed">Mixed-use / campus</option>
-          </select>
+          <div className="relative mt-1">
+            <select
+              id="projectType"
+              name="projectType"
+              value={form.projectType}
+              onChange={(event) => handleChange('projectType', event.target.value)}
+              onBlur={() => handleBlur('projectType')}
+              className="w-full appearance-none rounded-md border border-brand-200 bg-white px-3 pr-8 py-2 text-xs text-brand-900 shadow-sm outline-none transition ring-brand-500 focus:border-brand-400 focus:ring-2"
+            >
+              <option value="">Select an option</option>
+              <option value="commercial">Commercial / workplace</option>
+              <option value="residential">Residential</option>
+              <option value="industrial">Industrial / logistics</option>
+              <option value="mixed">Mixed-use / campus</option>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-2 flex items-center text-xs text-brand-600">
+              ▼
+            </span>
+          </div>
           {touched.projectType && errors.projectType && (
             <p className="mt-1 text-[11px] text-rose-600" role="alert">
               {errors.projectType}
@@ -216,20 +221,25 @@ const QuoteForm: FC = () => {
           <label htmlFor="budget" className="block text-[11px] font-semibold uppercase tracking-wide text-brand-600">
             Budget range (optional)
           </label>
-          <select
-            id="budget"
-            name="budget"
-            value={form.budget}
-            onChange={(event) => handleChange('budget', event.target.value)}
-            onBlur={() => handleBlur('budget')}
-            className="mt-1 w-full rounded-md border border-brand-200 bg-white px-3 py-2 text-xs text-brand-900 shadow-sm outline-none transition ring-brand-500 focus:border-brand-400 focus:ring-2"
-          >
-            <option value="">Select a range</option>
-            <option value="under-10m">Under $10M</option>
-            <option value="10-50m">$10M – $50M</option>
-            <option value="50-100m">$50M – $100M</option>
-            <option value="100m-plus">$100M+</option>
-          </select>
+          <div className="relative mt-1">
+            <select
+              id="budget"
+              name="budget"
+              value={form.budget}
+              onChange={(event) => handleChange('budget', event.target.value)}
+              onBlur={() => handleBlur('budget')}
+              className="w-full appearance-none rounded-md border border-brand-200 bg-white px-3 pr-8 py-2 text-xs text-brand-900 shadow-sm outline-none transition ring-brand-500 focus:border-brand-400 focus:ring-2"
+            >
+              <option value="">Select a range</option>
+              <option value="under-10m">Under $10M</option>
+              <option value="10-50m">$10M – $50M</option>
+              <option value="50-100m">$50M – $100M</option>
+              <option value="100m-plus">$100M+</option>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-2 flex items-center text-xs text-brand-600">
+              ▼
+            </span>
+          </div>
         </div>
         <div
           role="button"
