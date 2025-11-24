@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const FAQ: FC = () => {
   const faqs = [
@@ -104,6 +105,12 @@ const FAQ: FC = () => {
                   You can use the quote form on the Home page or the Contact page if you are ready to discuss a specific
                   opportunity.
                 </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center rounded-md bg-brand-600 px-3 py-1.5 text-[11px] font-semibold text-white shadow-sm transition-transform duration-150 ease-in-out-soft hover:-translate-y-0.5 hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                >
+                  Contact our team
+                </Link>
               </>
             )}
           </aside>
